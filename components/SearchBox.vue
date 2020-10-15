@@ -289,16 +289,19 @@ export default {
     &.focused
       background-color #f3f4f5
 @media (max-width: $MQNarrow)
-  .search-box
+  .search-box:not(.no-collapse)
     input
       cursor pointer
       width 0
       border-color transparent
       position relative
       &:focus
+        width 10rem
+  .search-box
+    input
+      &:focus
         cursor text
         left 0
-        width 10rem
 // Match IE11
 @media all and (-ms-high-contrast: none)
   .search-box input
